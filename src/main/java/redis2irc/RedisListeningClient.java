@@ -28,7 +28,7 @@ public class RedisListeningClient {
         listenerThread.start();
     }
 
-    public void stop() {
+    public void close() {
         jedisPubSub.unsubscribe();
 
         try {
