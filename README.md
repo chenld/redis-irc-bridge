@@ -1,3 +1,4 @@
+
 # redis-irc-bridge
 
 Subscribes to redis channels and pushes the messages to an irc channel.
@@ -15,14 +16,15 @@ This creates a simple command line interface to push messages to irc.
     ./build
     ~~~
 
-    This produces a self contain executable jar.
+    This produces a binary that contains all the classes and a little bootstrapper.
+
 
 *  Starting the bridge
 
-    `java -jar target/redis-irc-bridge.jar -n NICKNAME -i irc://ircserver.com -r redis://localhost -m redis-channel=irc-channel`
+    `target/redis-irc-bridge -n NICKNAME -i irc://ircserver.com -r redis://localhost -m redis-channel=irc-channel`
 
     The mapping (`-m`) consists of a comma separated list of pairs of the form `redis-channel=irc-channel`. Note: that irc channel
-    is without the trailing #.
+    is without the leading #.
 
 * Send messages
 
