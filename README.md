@@ -29,3 +29,8 @@ This creates a simple command line interface to push messages to irc.
 * Send messages
 
     `redis-cli PUBLISH "redis-channel" "This awesomeness has been pushed via redis"`
+
+## Limitations
+
+* No reconnect when the connection to either redis or the irc server get lost.\
+* No `--help` option.
